@@ -25,6 +25,9 @@ function previewImage(e) {
   e.preventDefault();
 
   const source = e.target.dataset.source;
+  if (!source) {
+    return
+  }
 
   const instance = basicLightbox.create(
     `
